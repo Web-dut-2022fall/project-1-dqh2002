@@ -1,0 +1,20 @@
+{% load static %}
+
+<div class="sticky">
+    <nav class="navbar navbar-dark justify-content-center ">
+        <a class="navbar-brand" href="{% url 'random' %}">
+            Encyclopedia
+            <img src="{% static 'assets/encyclopedia.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        </nav>
+    
+    <form action="{% url 'search' %}" method="GET">
+        <input class="form-control mb-4 mt-3" type="text" name="q" placeholder="Search Encyclopedia">
+    </form>
+    
+    <div class="list-group bg-dark">
+        <a class="list-group-item list-group-item-action" href="{% url 'index' %}">Home</a>
+        <a class="list-group-item list-group-item-action" href="{% url 'createPage' %}">Create New Page</a>
+        <a class="list-group-item list-group-item-action " href="{% url 'random' %}">Random Page</a>
+    </div>
+</div>

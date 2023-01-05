@@ -1,3 +1,5 @@
-# Python
+Python is a programming language that can be used both for writing **command-line scripts** or building **web applications**. Python is one of those rare languages which can claim to be both simple and powerful. You will find yourself pleasantly surprised to see how easy it is to concentrate on the solution to the problem rather than the syntax and structure of the language you are programming in.
 
-Python is a programming language that can be used both for writing **command-line scripts** or building **web applications**.
+####The official introduction to Python is:
+
+Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python's elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.

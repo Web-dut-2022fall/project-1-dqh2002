@@ -1,0 +1,24 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Edit {{ title }}
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+  <h1>Editing Page "{{ title }}"</h1> <br>
+  <form action="{% url 'edit' title=title %}" method="post">
+      {% csrf_token %}
+      <div class="col-8">
+        {{ editPageForm.content | as_crispy_field }}
+      </div>
+      <div class="text-right col-md-8 col-lg-8">
+        <input class="btn btn-primary" type="submit" value="Confirm Edit">
+      </div>
+  </form>
+</div>
+  
+
+{% endblock %}

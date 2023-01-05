@@ -1,0 +1,25 @@
+{% extends 'encyclopedia/layout.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+    New Page
+{% endblock title %}
+
+{% block body %}
+<div class="container-fluid">
+    <h1>Create new page </h1> <br>
+    <form action="{% url 'createPage' %}" method="post">
+        {% csrf_token %}
+        <div class="col-8">
+            {{ createPageForm.title | as_crispy_field }}
+        </div>
+        <div class="col-8">
+            {{ createPageForm.content | as_crispy_field }}
+        </div>
+        <div class="text-right col-md-8 col-lg-8">
+            <input class="btn btn-primary" type="submit" value="Create">
+        </div>
+    </form>
+</div>
+{% endblock  %}

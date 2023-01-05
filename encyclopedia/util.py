@@ -16,8 +16,7 @@ def list_entries():
 def save_entry(title, content):
     """
     Saves an encyclopedia entry, given its title and Markdown
-    content. If an existing entry with the same title already exists,
-    it is replaced.
+    content. If an existing entry with the same title already exists, it is replaced.
     """
     filename = f"entries/{title}.md"
     if default_storage.exists(filename):
@@ -27,9 +26,9 @@ def save_entry(title, content):
 
 def get_entry(title):
     """
-    Retrieves an encyclopedia entry by its title. If no such
-    entry exists, the function returns None.
+    Retrieves an encyclopedia entry by its title. If no such entry exists, the function returns None.
     """
+
     try:
         f = default_storage.open(f"entries/{title}.md")
         return f.read().decode("utf-8")
